@@ -1,48 +1,44 @@
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 
 public class RomanNumerals {
 
-    public int romanNumeralsToInteger(String numerals) {
+    private String numerals;
+    private int accumulatedValue;
+    HashMap<String, Integer> numeralMap = new HashMap();
 
-        int accumulatedValue = 0;
+    String iv = "IV";
+    String v = "V";
+    String ix = "IX";
+    String x = "X";
 
-        String iv = "IV";
-        String v = "V";
-        String ix = "IX";
-        String x = "X";
-
-        HashMap<String, Integer> numeralMap = new HashMap();
+    public RomanNumerals(String numerals) {
+        this.numerals = numerals;
+        accumulatedValue = 0;
 
         numeralMap.put(iv, 4);
         numeralMap.put(v, 5);
         numeralMap.put(ix, 9);
         numeralMap.put(x, 10);
+    }
 
-        if (numerals.startsWith(ix)){
-            accumulatedValue += numeralMap.get(ix);
-            numerals = popOffNumeral(numerals,ix);
-        }
+    public int romanNumeralsToInteger() {
 
-        if (numerals.startsWith(x)){
-            accumulatedValue += numeralMap.get(x);
-            numerals = popOffNumeral(numerals,x);
-        }
+        miracleNumeralCalculator(ix, numeralMap);
 
-        if (numerals.startsWith(iv)){
-            accumulatedValue += numeralMap.get(iv);
-            numerals = popOffNumeral(numerals,iv);
-        }
+        miracleNumeralCalculator(x, numeralMap);
 
-        if (numerals.startsWith(v)){
-            accumulatedValue += numeralMap.get(v);
-            numerals = popOffNumeral(numerals,v);
-        }
+        miracleNumeralCalculator(iv, numeralMap);
 
-
+        miracleNumeralCalculator(v, numeralMap);
 
         return accumulatedValue + numerals.length();
+    }
+
+    private void miracleNumeralCalculator(String targetNumeral, HashMap<String, Integer> numeralMap) {
+        if (numerals.startsWith(targetNumeral)) {
+            accumulatedValue += numeralMap.get(targetNumeral);
+            numerals = popOffNumeral(numerals, targetNumeral);
+        }
     }
 
     public String popOffNumeral(String numerals, String targetNumerals){
