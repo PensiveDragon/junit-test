@@ -1,40 +1,32 @@
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Set;
 
 public class RomanNumerals {
 
     private String numerals;
     private int accumulatedValue;
-    HashMap<String, Integer> numeralMap = new HashMap();
-
-    String iv = "IV";
-    String v = "V";
-    String ix = "IX";
-    String x = "X";
+    LinkedHashMap<String, Integer> numeralMap = new LinkedHashMap();
 
     public RomanNumerals(String numerals) {
         this.numerals = numerals;
         accumulatedValue = 0;
 
-        numeralMap.put(iv, 4);
-        numeralMap.put(v, 5);
-        numeralMap.put(ix, 9);
-        numeralMap.put(x, 10);
+        numeralMap.put("IX", 9);
+        numeralMap.put("X", 10);
+        numeralMap.put("IV", 4);
+        numeralMap.put("V", 5);
     }
 
     public int romanNumeralsToInteger() {
 
-        miracleNumeralCalculator(ix, numeralMap);
-
-        miracleNumeralCalculator(x, numeralMap);
-
-        miracleNumeralCalculator(iv, numeralMap);
-
-        miracleNumeralCalculator(v, numeralMap);
+        for (String key : numeralMap.keySet()) {
+            consumeNumeral(key);
+        }
 
         return accumulatedValue + numerals.length();
     }
 
-    private void miracleNumeralCalculator(String targetNumeral, HashMap<String, Integer> numeralMap) {
+    private void consumeNumeral(String targetNumeral) {
         if (numerals.startsWith(targetNumeral)) {
             accumulatedValue += numeralMap.get(targetNumeral);
             numerals = popOffNumeral(numerals, targetNumeral);
