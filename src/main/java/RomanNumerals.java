@@ -5,25 +5,31 @@ public class RomanNumerals {
 
     private String numerals;
     private int accumulatedValue;
-    LinkedHashMap<String, Integer> numeralMap = new LinkedHashMap();
+    private LinkedHashMap<String, Integer> numeralMap = new LinkedHashMap<>();
 
     public RomanNumerals(String numerals) {
         this.numerals = numerals;
         accumulatedValue = 0;
 
-        numeralMap.put("IX", 9);
+        numeralMap.put("C", 100);
+        numeralMap.put("XC", 90);
+        numeralMap.put("L", 50);
+        numeralMap.put("XL", 40);
         numeralMap.put("X", 10);
-        numeralMap.put("IV", 4);
+        numeralMap.put("IX", 9);
         numeralMap.put("V", 5);
+        numeralMap.put("IV", 4);
+        numeralMap.put("I", 1);
     }
 
     public int romanNumeralsToInteger() {
 
         for (String key : numeralMap.keySet()) {
-            consumeNumeral(key);
+            for (int i = 0; i < 3; i++) {
+                consumeNumeral(key);
+            }
         }
-
-        return accumulatedValue + numerals.length();
+        return accumulatedValue;
     }
 
     private void consumeNumeral(String targetNumeral) {

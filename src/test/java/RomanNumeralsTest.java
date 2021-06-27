@@ -52,6 +52,31 @@ public class RomanNumeralsTest {
     }
 
     @Test
+    public void XIX_is_19() {
+        assertThat(new RomanNumerals("XIX").romanNumeralsToInteger(), is(19));
+    }
+
+    @Test
+    public void XX_is_20() {
+        assertThat(new RomanNumerals("XX").romanNumeralsToInteger(), is(20));
+    }
+
+    @Test
+    public void XXIV_is_24() {
+        assertThat(new RomanNumerals("XXIV").romanNumeralsToInteger(), is(24));
+    }
+
+    @Test
+    public void XL_is_40() {
+        assertThat(new RomanNumerals("XL").romanNumeralsToInteger(), is(40));
+    }
+
+    @Test
+    public void L_is_50() {
+        assertThat(new RomanNumerals("L").romanNumeralsToInteger(), is(50));
+    }
+
+    @Test
     public void VI_becomes_V(){
         assertThat(new RomanNumerals("VI").popOffNumeral("VI","V"), is("I"));
     }
