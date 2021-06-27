@@ -77,6 +77,9 @@ public class RomanNumeralsTest {
     }
 
     @Test
+    public void MCMLXXXVII_is_1987() {assertThat(new RomanNumerals("MCMLXXXVII").romanNumeralsToInteger(), is(1987));}
+
+    @Test
     public void VI_becomes_V(){
         assertThat(new RomanNumerals("VI").popOffNumeral("VI","V"), is("I"));
     }

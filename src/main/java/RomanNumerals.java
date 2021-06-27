@@ -11,6 +11,10 @@ public class RomanNumerals {
         this.numerals = numerals;
         accumulatedValue = 0;
 
+        numeralMap.put("M", 1000);
+        numeralMap.put("CM", 900);
+        numeralMap.put("D", 500);
+        numeralMap.put("CD", 400);
         numeralMap.put("C", 100);
         numeralMap.put("XC", 90);
         numeralMap.put("L", 50);
