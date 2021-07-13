@@ -12,36 +12,13 @@ public class RomanNumerals {
         accumulatedValue = 0;
 
         numeralMap.put("M", 1000);
-        //numeralMap.put("CM", 900);
         numeralMap.put("D", 500);
-        //numeralMap.put("CD", 400);
         numeralMap.put("C", 100);
-        //numeralMap.put("XC", 90);
         numeralMap.put("L", 50);
-        //numeralMap.put("XL", 40);
         numeralMap.put("X", 10);
-        //numeralMap.put("IX", 9);
         numeralMap.put("V", 5);
-        //numeralMap.put("IV", 4);
         numeralMap.put("I", 1);
     }
-/*
-    public int romanNumeralsToInteger() {
-
-        // if first numeral is lower in value than second numeral, accumlatedValue += (second numeral value - first numeral value).
-
-        for (String key : numeralMap.keySet()) {
-            if ((numerals.length() > 1) && (numeralMap.get(String.valueOf(numerals.charAt(0))) < numeralMap.get(String.valueOf(numerals.charAt(1))))) {
-                consumeNumeral(key, true);
-            } else {
-                for (int i = 0; i < 3; i++) {
-                    consumeNumeral(key, false);
-                }
-            }
-        }
-        return accumulatedValue;
-    }
-  */
 
     public int romanNumeralsToInteger() {
         while (!numerals.isEmpty()) {
