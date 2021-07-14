@@ -16,7 +16,10 @@ repositories {
 dependencies {
     testImplementation(platform('org.junit:junit-bom:5.7.2'))
     testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '2.1'
 }
+
+
 
 test {
     useJUnitPlatform()
