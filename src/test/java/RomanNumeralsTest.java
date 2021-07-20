@@ -31,18 +31,16 @@ public class RomanNumeralsTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"VI,V", "V,"})
+    @CsvSource({
+            "VI,I",
+            "V,''",
+            "MCMLXXXVII,CMLXXXVII"})
     public void roman_numeral_is_trimmed(String input, String output){
-        assertThat(new RomanNumerals(input).popOffNumeral(input,"V"), is(output));
-    }
-    
-    @Test
-    public void VI_becomes_V(String input, String output){
-        assertThat(new RomanNumerals(input).popOffNumeral(input,"V"), is(output));
+        assertThat(new RomanNumerals(input).popOffNumeral(input), is(output));
     }
 
     @Test
     public void V_becomes_Empty(){
-        assertThat(new RomanNumerals("V").popOffNumeral("V","V"), is(""));
+        assertThat(new RomanNumerals("V").popOffNumeral("V"), is(""));
     }
 }

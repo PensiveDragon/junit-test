@@ -24,7 +24,7 @@ public class RomanNumerals {
         while (!numerals.isEmpty()) {
             String firstNumeral = numeralAtPosition(0);
             if (isFirstNumeralSmaller()) {
-                consumeNumeral( firstNumeral, true);
+                consumeNumeral(firstNumeral, true);
             } else {
                 consumeNumeral(firstNumeral, false);
             }
@@ -55,13 +55,14 @@ public class RomanNumerals {
             } else {
                 accumulatedValue += numeralMap.get(targetNumeral);
             }
-            numerals = popOffNumeral(numerals, targetNumeral);
+            numerals = popOffNumeral(numerals);
         }
     }
 
-    public String popOffNumeral(String numerals, String targetNumerals){
+    public String popOffNumeral(String numerals){
 
-        return numerals.substring(targetNumerals.length());
+        return numerals.substring(1);
+
     }
 
     /*
