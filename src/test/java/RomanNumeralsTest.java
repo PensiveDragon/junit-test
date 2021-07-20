@@ -34,7 +34,16 @@ public class RomanNumeralsTest {
     @CsvSource({
             "VI,I",
             "V,''",
-            "MCMLXXXVII,CMLXXXVII"})
+            "MCMLXXXVII,CMLXXXVII",
+            "CMLXXXVII,MLXXXVII",
+            "MLXXXVII,LXXXVII",
+            "LXXXVII,XXXVII",
+            "XXXVII,XXVII",
+            "XXVII,XVII",
+            "XVII,VII",
+            "VII,II",
+            "II,I",
+            "I,''"})
     public void roman_numeral_is_trimmed(String input, String output){
         assertThat(new RomanNumerals(input).popOffNumeral(input), is(output));
     }
