@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RomanNumeralsTest" tests="28" skipped="0" failures="0" errors="0" timestamp="2021-07-22T15:47:38" hostname="DESKTOP-Q0DAKRS" time="0.085">
+  <properties/>
+  <testcase name="1 I has value 1" classname="RomanNumeralsTest" time="0.031"/>
+  <testcase name="2 II has value 2" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="3 IV has value 4" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="4 V has value 5" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="5 VI has value 6" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="6 IX has value 9" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="7 X has value 10" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="8 XI has value 11" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="9 XIV has value 14" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="10 XIX has value 19" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="11 XX has value 20" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="12 XXIV has value 24" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="13 XL has value 40" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="14 L has value 50" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="15 MCMLXXXVII has value 1987" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="1 VI is reduced to I" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="2 V is reduced to " classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="3 MCMLXXXVII is reduced to CMLXXXVII" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="4 CMLXXXVII is reduced to MLXXXVII" classname="RomanNumeralsTest" time="0.002"/>
+  <testcase name="5 MLXXXVII is reduced to LXXXVII" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="6 LXXXVII is reduced to XXXVII" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="7 XXXVII is reduced to XXVII" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="8 XXVII is reduced to XVII" classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="9 XVII is reduced to VII" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="10 VII is reduced to II" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="11 II is reduced to I" classname="RomanNumeralsTest" time="0.0"/>
+  <testcase name="12 I is reduced to " classname="RomanNumeralsTest" time="0.001"/>
+  <testcase name="V_becomes_Empty()" classname="RomanNumeralsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

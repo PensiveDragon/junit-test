@@ -9,7 +9,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class RomanNumeralsTest {
 
     @ParameterizedTest(name = "{index} {0} has value {1}")
-    @DisplayName("Bats")
     @CsvSource({
             "I,1",
             "II,2",
@@ -30,7 +29,7 @@ public class RomanNumeralsTest {
         assertThat(new RomanNumerals(numeral).romanNumeralsToInteger(), is(value));
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "{index} {0} is reduced to {1}")
     @CsvSource({
             "VI,I",
             "V,''",
